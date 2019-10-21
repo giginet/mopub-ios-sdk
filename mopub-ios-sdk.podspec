@@ -37,6 +37,9 @@ Pod::Spec.new do |spec|
                             'WebKit'
                           ]
   spec.default_subspecs = 'MoPubSDK'
+  spec.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES',
+  }
 
   spec.subspec 'MoPubSDK' do |sdk|
     sdk.dependency              'mopub-ios-sdk/Core'
